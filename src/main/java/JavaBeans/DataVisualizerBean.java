@@ -6,7 +6,8 @@ import tech.tablesaw.api.Table;
 import java.io.IOException;
 import java.io.Serializable;
 
-public class DataVisualizerBean implements Serializable, IDataPlot, IDataOrganizer {
+public class DataVisualizerBean implements Serializable,
+        IDataPlot, IDataOrganizer {
     private String attr1; //Primeiro Atributo
     private int attr2; //Segundo Atributo
     private double attr3; //Terceiro Atributo
@@ -15,8 +16,10 @@ public class DataVisualizerBean implements Serializable, IDataPlot, IDataOrganiz
     public DataVisualizerBean() {
     }
 
-//  construtor com parâmetros para poder instanciar classe caso necessario
-    public DataVisualizerBean(String attr1, int attr2, double attr3) {
+//  construtor com parâmetros para poder
+//  instanciar classe caso necessario
+    public DataVisualizerBean(String attr1, int attr2,
+                              double attr3) {
         this.attr1 = attr1;
         this.attr2 = attr2;
         this.attr3 = attr3;
@@ -57,7 +60,8 @@ public class DataVisualizerBean implements Serializable, IDataPlot, IDataOrganiz
         System.out.println(0);
     }
 
-    public String[][] combineTable(String[][] table1, String[][] table2){
+    public String[][] combineTable(String[][] table1,
+                                   String[][] table2){
         return null;
     }
 
@@ -65,29 +69,26 @@ public class DataVisualizerBean implements Serializable, IDataPlot, IDataOrganiz
         return null;
     }
 
-    public String[][] sortTable(String[][] table){
+    public Table sortTable(String[][] table){
         Table table1 = null;
         try {
-            table1 = Table.read().csv("zombie-health-spreadsheet-ml-training.csv");
+            table1 = Table.read().csv("./src/main/" +
+                    "zombie-health-spreadsheet-ml-training.csv");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         if (table1 != null) {
-            table1.sortOn(table[0][0]);
+//            table1 = table1.sortOn("paralysis", "yellow_tongue",
+//                    "member_loss", "chest_pain", "trembling_finger",
+//                    "severe_anger");
+
+            table1 = table1.sortOn(table[0][0], table[0][1], table[0][2]);
         }
-        return null;
+        return table1;
     }
 
 //    métodos extras
 //    ...
-
-//    public static void main(String[] args) {
-//        double[] numbers = {1, 2, 3, 4};
-//        DoubleColumn nc;
-//        nc = DoubleColumn.create("Test", numbers);
-//        System.out.println(nc.print());
-//
-//    }
 
 }

@@ -1,7 +1,9 @@
 package JavaBeans;
 
 import tech.tablesaw.api.DoubleColumn;
+import tech.tablesaw.api.Table;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 public class DataVisualizerBean implements Serializable, IDataPlot, IDataOrganizer {
@@ -64,18 +66,28 @@ public class DataVisualizerBean implements Serializable, IDataPlot, IDataOrganiz
     }
 
     public String[][] sortTable(String[][] table){
+        Table table1 = null;
+        try {
+            table1 = Table.read().csv("zombie-health-spreadsheet-ml-training.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (table1 != null) {
+            table1.sortOn(table[0][0]);
+        }
         return null;
     }
 
 //    métodos extras
 //    ...
 
-    public static void main(String[] args) {
-        double[] numbers = {1, 2, 3, 4};
-        DoubleColumn nc;
-        nc = DoubleColumn.create("Test", numbers);
-        System.out.println(nc.print());
-
-    }
+//    public static void main(String[] args) {
+//        double[] numbers = {1, 2, 3, 4};
+//        DoubleColumn nc;
+//        nc = DoubleColumn.create("Test", numbers);
+//        System.out.println(nc.print());
+//
+//    }
 
 }

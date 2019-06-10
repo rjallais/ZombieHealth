@@ -9,5 +9,11 @@
         <module name="ZombieHealth" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ZombieHealth" options="-Xlint" />
+    </option>
   </component>
 </project>

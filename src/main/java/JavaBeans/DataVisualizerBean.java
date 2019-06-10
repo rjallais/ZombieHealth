@@ -9,9 +9,9 @@ import java.io.Serializable;
 
 public class DataVisualizerBean implements Serializable,
         IDataPlot, IDataOrganizer {
-    private String attr1; //Primeiro Atributo
-    private int attr2; //Segundo Atributo
-    private double attr3; //Terceiro Atributo
+//    private String attr1; //Primeiro Atributo
+//    private int attr2; //Segundo Atributo
+//    private double attr3; //Terceiro Atributo
 
 //  construtor sem parâmetro necessário no JavaBean
     public DataVisualizerBean() {
@@ -19,37 +19,37 @@ public class DataVisualizerBean implements Serializable,
 
 //  construtor com parâmetros para poder
 //  instanciar classe caso necessario
-    public DataVisualizerBean(String attr1, int attr2,
-                              double attr3) {
-        this.attr1 = attr1;
-        this.attr2 = attr2;
-        this.attr3 = attr3;
-    }
+//    public DataVisualizerBean(String attr1, int attr2,
+//                              double attr3) {
+//        this.attr1 = attr1;
+//        this.attr2 = attr2;
+//        this.attr3 = attr3;
+//    }
 
 //  getters e setters padronizados do JavaBean
-    public String getAttr1() {
-        return attr1;
-    }
-
-    public void setAttr1(String attr1) {
-        this.attr1 = attr1;
-    }
-
-    public int getAttr2() {
-        return attr2;
-    }
-
-    public void setAttr2(int attr2) {
-        this.attr2 = attr2;
-    }
-
-    public double getAttr3() {
-        return attr3;
-    }
-
-    public void setAttr3(double attr3) {
-        this.attr3 = attr3;
-    }
+//    public String getAttr1() {
+//        return attr1;
+//    }
+//
+//    public void setAttr1(String attr1) {
+//        this.attr1 = attr1;
+//    }
+//
+//    public int getAttr2() {
+//        return attr2;
+//    }
+//
+//    public void setAttr2(int attr2) {
+//        this.attr2 = attr2;
+//    }
+//
+//    public double getAttr3() {
+//        return attr3;
+//    }
+//
+//    public void setAttr3(double attr3) {
+//        this.attr3 = attr3;
+//    }
 /*************************************************************/
 
 //  implementação dos métodos declarados nas interfaces

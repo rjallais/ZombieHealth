@@ -1,19 +1,11 @@
 package JavaBeans;
 
 import tech.tablesaw.api.*;
-import tech.tablesaw.columns.Column;
-import tech.tablesaw.columns.numbers.IntColumnType;
-import tech.tablesaw.columns.strings.StringColumnType;
 import tech.tablesaw.plotly.Plot;
 import tech.tablesaw.plotly.api.*;
-import tech.tablesaw.plotly.components.Figure;
-
-import static tech.tablesaw.aggregate.AggregateFunctions.sum;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.LinkedList;
-import java.util.List;
 
 public class DataVisualizerBean implements Serializable,
         IDataPlot, IDataOrganizer {
@@ -69,6 +61,24 @@ public class DataVisualizerBean implements Serializable,
             e.printStackTrace();
         }
         System.out.println(t != null ? t.printAll() : null);
+    }
+
+    public void plotTable(Table dados){
+        System.out.println(dados != null ? dados.printAll() : null);
+    }
+
+    public void plotTable(String[][] Dados){
+        Table t = Table.create("Tabela de Dados");
+        for (int j = 0; j < Dados[0].length; j++) {
+            String[] v = new String[Dados.length];
+            for (int i = 1; i < Dados.length; i++) {
+                v[i] = Dados[i][j];
+            }
+            StringColumn sc = StringColumn.create(Dados[0][j], v);
+            t.addColumns(sc);
+        }
+
+        System.out.println(t.printAll());
     }
 
     public void plotGraph(String Dados){
@@ -137,31 +147,34 @@ public class DataVisualizerBean implements Serializable,
         return null;
     }
 
-    public Table sortTable(String[][] table){
-        Table table1 = null;
+    public String[][] sortTable(String dados){
+        Table table1 = Table.create(dados);
         try {
-            table1 = Table.read().csv("./src/main/" +
-                    "zombie-health-spreadsheet-ml-training.csv");
+            table1 = Table.read().csv(dados);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        if (table1 != null) {
-//            table1 = table1.sortOn("paralysis", "yellow_tongue",
-//                    "member_loss", "chest_pain", "trembling_finger",
-//                    "severe_anger");
-
-//            String v = "";
-//            for (int i = 0; i < table[0].length; i++) {
-//                v += (table[0][i]);
-//                if (i == table[0].length -1)
-//                    continue;
-//                v += ", ";
-//            }
-
-            table1 = table1.sortOn(table[0]);
+        String[] v = new String[table1.columnCount()-1];
+        int i = 0;
+        for (String string:
+                table1.columnNames()) {
+            if (i == table1.columnCount()-1)
+                break;
+            v[i] = string;
+            i++;
         }
-            return table1;
+        table1 = table1.sortDescendingOn(v);
+
+        String[][] novo = table1 != null ? new String[table1.rowCount()][table1.columnCount()] : new String[0][];
+        for (i = 1; i < (table1 != null ? table1.rowCount() : 0); i++){
+            for (int j = 0; j < table1.columnCount(); j++) {
+                novo[i][j] = table1.getString(i, j);
+            }
+        }
+        novo[0] = table1 != null ? table1.columnNames().toArray(new String[0]) : new String[0];
+
+        return novo;
     }
 
 //    métodos extras

@@ -7,8 +7,8 @@ public class Main {
                 "member_loss", "member_loss", "chest_pain",
                 "trembling_finger", "severe_anger"}};
         DataVisualizerBean dv = new DataVisualizerBean();
-//        Table newTable = dv.sortTable(table);
-//        System.out.println(newTable);
-        dv.plotTable("src/main/zombie-health-cases500.csv");
+
+        String[][] tabela = dv.sortTable("src/main/zombie-health-cases500.csv");
+        dv.plotTable(tabela);
     }
 }

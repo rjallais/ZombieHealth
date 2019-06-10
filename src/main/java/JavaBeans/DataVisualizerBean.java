@@ -56,7 +56,7 @@ public class DataVisualizerBean implements Serializable,
     public void plotTable(String Dados){
         Table t = null;
         try {
-            t = Table.read().csv(Dados);
+            t = Table.read().file(Dados);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,9 +70,9 @@ public class DataVisualizerBean implements Serializable,
     public void plotTable(String[][] Dados){
         Table t = Table.create("Tabela de Dados");
         for (int j = 0; j < Dados[0].length; j++) {
-            String[] v = new String[Dados.length];
+            String[] v = new String[Dados.length-1];
             for (int i = 1; i < Dados.length; i++) {
-                v[i] = Dados[i][j];
+                v[i-1] = Dados[i][j];
             }
             StringColumn sc = StringColumn.create(Dados[0][j], v);
             t.addColumns(sc);
@@ -83,7 +83,7 @@ public class DataVisualizerBean implements Serializable,
 
     public void plotGraph(String Dados){
         try {
-            Table t = Table.read().csv("src/main/" +
+            Table t = Table.read().file("src/main/" +
                     "zombie-health-spreadsheet-ml-training.csv");
 
             int row = t.rowCount();
@@ -150,7 +150,7 @@ public class DataVisualizerBean implements Serializable,
     public String[][] sortTable(String dados){
         Table table1 = Table.create(dados);
         try {
-            table1 = Table.read().csv(dados);
+            table1 = Table.read().file(dados);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -166,10 +166,10 @@ public class DataVisualizerBean implements Serializable,
         }
         table1 = table1.sortDescendingOn(v);
 
-        String[][] novo = table1 != null ? new String[table1.rowCount()][table1.columnCount()] : new String[0][];
-        for (i = 1; i < (table1 != null ? table1.rowCount() : 0); i++){
+        String[][] novo = table1 != null ? new String[table1.rowCount() + 1][table1.columnCount()] : new String[0][];
+        for (i = 0; i < (table1 != null ? table1.rowCount() : 0); i++){
             for (int j = 0; j < table1.columnCount(); j++) {
-                novo[i][j] = table1.getString(i, j);
+                novo[i+1][j] = table1.getString(i, j);
             }
         }
         novo[0] = table1 != null ? table1.columnNames().toArray(new String[0]) : new String[0];

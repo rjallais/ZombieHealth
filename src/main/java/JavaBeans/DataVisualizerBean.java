@@ -166,7 +166,8 @@ public class DataVisualizerBean implements Serializable,
         }
         table1 = table1.sortDescendingOn(v);
 
-        String[][] novo = table1 != null ? new String[table1.rowCount() + 1][table1.columnCount()] : new String[0][];
+        String[][] novo = table1 != null ? new String[table1.rowCount()
+                + 1][table1.columnCount()] : new String[0][];
         for (i = 0; i < (table1 != null ? table1.rowCount() : 0); i++){
             for (int j = 0; j < table1.columnCount(); j++) {
                 novo[i+1][j] = table1.getString(i, j);

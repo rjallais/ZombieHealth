@@ -1,8 +1,4 @@
 import JavaBeans.DataVisualizerBean;
-import tech.tablesaw.api.BooleanColumn;
-import tech.tablesaw.api.Table;
-
-import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,9 +9,13 @@ public class Main {
 
         String[][] tabela = dv.sortTable("src/main/zombie-health-new-cases20.csv");
         dv.plotTable(tabela);
-        String[] paciente = {"false", "false", "false", "false", "true", "false", "false", "false", "NOVA DOENÇA"};
-        tabela = dv.addPatient(paciente, tabela);
-        dv.plotTable(tabela);
+//        String[] paciente = {"false", "false", "false", "false", "true", "false", "false", "false", "NOVA DOENÇA"};
+//        tabela = dv.addPatient(paciente, tabela);
+//        dv.plotTable(tabela);
+//
+//        dv.plotGraph("/home/rjallais/IdeaProjects/ZombieHealth/src/main/zombie-health-cases500.csv");
+
+
 //        try {
 //            Table tabela = Table.read().csv("src/main/zombie-health-new-cases20.csv");
 //            BooleanColumn yellow_tongue = tabela.booleanColumn("yellow_tongue");

@@ -10,47 +10,11 @@ import java.util.LinkedList;
 
 public class DataVisualizerBean implements Serializable,
         IDataPlot, IDataOrganizer {
-//    private String attr1; //Primeiro Atributo
-//    private int attr2; //Segundo Atributo
-//    private double attr3; //Terceiro Atributo
 
 //  construtor sem parâmetro necessário no JavaBean
     public DataVisualizerBean() {
     }
 
-//  construtor com parâmetros para poder
-//  instanciar classe caso necessario
-//    public DataVisualizerBean(String attr1, int attr2,
-//                              double attr3) {
-//        this.attr1 = attr1;
-//        this.attr2 = attr2;
-//        this.attr3 = attr3;
-//    }
-
-//  getters e setters padronizados do JavaBean
-//    public String getAttr1() {
-//        return attr1;
-//    }
-//
-//    public void setAttr1(String attr1) {
-//        this.attr1 = attr1;
-//    }
-//
-//    public int getAttr2() {
-//        return attr2;
-//    }
-//
-//    public void setAttr2(int attr2) {
-//        this.attr2 = attr2;
-//    }
-//
-//    public double getAttr3() {
-//        return attr3;
-//    }
-//
-//    public void setAttr3(double attr3) {
-//        this.attr3 = attr3;
-//    }
 /*************************************************************/
 
 //  implementação dos métodos declarados nas interfaces
@@ -69,26 +33,25 @@ public class DataVisualizerBean implements Serializable,
     }
 
     public void plotTable(String[][] Dados){
-        Table t = Table.create("Tabela de Dados");
-        for (int j = 0; j < Dados[0].length; j++) {
-            String[] v = new String[Dados.length-1];
-            for (int i = 1; i < Dados.length; i++) {
-                v[i-1] = Dados[i][j];
-            }
-            StringColumn sc = StringColumn.create(Dados[0][j], v);
-            t.addColumns(sc);
-        }
+        Table t = createTable(Dados);
 
         System.out.println(t.printAll());
     }
 
     public void plotGraph(String Dados){
         try {
-            Table t = Table.read().file("src/main/" +
-                    "zombie-health-spreadsheet-ml-training.csv");
+//            Table t = Table.read().file("src/main/" +
+//                    "zombie-health-spreadsheet-ml-training.csv");
+//
+//            int row = t.rowCount();
+//            int col = t.columnCount();
 
-            int row = t.rowCount();
-            int col = t.columnCount();
+            Table wines = Table.read().csv("src/main/zombie-health-plot.csv");
+
+            Table champagne =
+                    wines.where(
+                            wines.stringColumn("diagnostic").isEqualTo("viral_infection"));
+
 
 //            int[] init = {0};
 //            IntColumn ic = IntColumn.create("init", init);
@@ -129,10 +92,8 @@ public class DataVisualizerBean implements Serializable,
 //            Table example = t.summarize("chest_pain", sum).by("paralysis");
 
             Plot.show(
-                    VerticalBarPlot.create("Zombie Health",
-                            t,
-                            "diagnostic",
-                            "chest_pain"));
+                    PiePlot.create("Relaçao sintomas",
+                            wines, "diagnostic", "member_loss"));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -204,7 +165,17 @@ public class DataVisualizerBean implements Serializable,
         return novo;
     }
 
-//    métodos extras
-//    ...
-
+//  métodos extras para auxiliar os demais
+    private Table createTable(String[][] Dados){
+        Table t = Table.create("Tabela de Dados");
+        for (int j = 0; j < Dados[0].length; j++) {
+            String[] v = new String[Dados.length-1];
+            for (int i = 1; i < Dados.length; i++) {
+                v[i-1] = Dados[i][j];
+            }
+            StringColumn sc = StringColumn.create(Dados[0][j], v);
+            t.addColumns(sc);
+        }
+        return t;
+    }
 }

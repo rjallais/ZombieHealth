@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ZombieHealth:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6565403d-e776-47f3-9711-9f1f81f899ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ZombieHealth_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,21 +29,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="341">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1736">
-              <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="310">
+              <caret line="30" column="38" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
                 <element signature="method#plotGraph#0;class#DataVisualizerBean#0" />
+                <element signature="method#combineTable#0;class#DataVisualizerBean#0" />
                 <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
                 <element signature="method#sortTable#0;class#DataVisualizerBean#0" />
                 <element signature="e#6559#6975#0" />
@@ -46,8 +57,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test_wines.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -83,11 +107,11 @@
         <option value="$PROJECT_DIR$/src/main/zombie-health-new-cases20.csv" />
         <option value="$PROJECT_DIR$/src/main/zombie-health-cases500.csv" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java" />
         <option value="$PROJECT_DIR$/src/main/zombie-health-plot.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" />
       </list>
     </option>
   </component>
@@ -242,7 +266,7 @@
       <workItem from="1560138589638" duration="36280000" />
       <workItem from="1560452049013" duration="2501000" />
       <workItem from="1560778507739" duration="7507000" />
-      <workItem from="1560797536255" duration="3099000" />
+      <workItem from="1560797536255" duration="7181000" />
     </task>
     <task id="LOCAL-00001" summary="Componente DataVisualizer">
       <created>1560053262943</created>
@@ -307,11 +331,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560782653272</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Componente DataVisualizer">
+      <created>1560800676375</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560800676375</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58112000" />
+    <option name="totallyTimeSpent" value="62194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
@@ -324,7 +355,7 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32996634" />
+      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.17171717" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
@@ -346,40 +377,8 @@
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="right" auto_hide="true" x="81" y="141" width="1727" height="939" id="Debug" internal_type="SLIDING" order="10" type="WINDOWED" weight="0.42088267" />
-      <window_info anchor="right" x="0" y="28" width="1920" height="1052" id="Run" maximized="true" order="11" type="WINDOWED" visible="true" weight="0.270183" />
+      <window_info anchor="right" x="0" y="28" width="1920" height="1052" id="Run" maximized="true" order="11" type="WINDOWED" weight="0.270183" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.30462864" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32996634" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32996634" />
-      <window_info anchor="bottom" id="Messages" order="5" visible="true" weight="0.32884398" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32996634" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Maven" order="0" weight="0.32938644" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info active="true" anchor="right" id="Debug" order="10" visible="true" weight="0.39935413" />
-      <window_info anchor="right" id="Run" order="11" weight="0.5522067" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -389,16 +388,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Componente DataVisualizer" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>7</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="novo[399]" />
@@ -449,13 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -557,6 +539,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Documents/test_wines.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tech/tablesaw/tablesaw-core/0.34.0/tablesaw-core-0.34.0.jar!/tech/tablesaw/api/Table.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+          <folding>
+            <element signature="e#4891#4892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tech/tablesaw/tablesaw-core/0.34.0/tablesaw-core-0.34.0.jar!/tech/tablesaw/io/DataFrameReader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-plot.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test_wines.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tech/tablesaw/tablesaw-core/0.34.0/tablesaw-core-0.34.0.jar!/tech/tablesaw/table/Relation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="442" selection-start-line="442" selection-end-line="442" />
+          <folding>
+            <element signature="e#14284#14285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-spreadsheet-ml-training.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-new-cases20.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-cases500.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="uml://MAVEN/Leftovers:Zombie-Health:1.0-SNAPSHOT">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -615,18 +674,18 @@
               <point x="-58.5" y="-0.0" />
             </edge>
             <edge source="tech.tablesaw:tablesaw-core:jar:0.34.0" target="tech.tablesaw:tablesaw-core:jar:0.34.0/org.apache.commons:commons-math3:jar:3.6.1">
-              <point x="88.0" y="-9.142857142857139" />
+              <point x="88.0" y="-9.142857142857167" />
               <point x="-102.5" y="-0.0" />
             </edge>
             <edge source="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre" target="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre/org.checkerframework:checker-qual:jar:2.0.0">
-              <point x="49.5" y="-6.399999999999977" />
-              <point x="624.0" y="121.83809523809529" />
+              <point x="49.5" y="-6.400000000000006" />
+              <point x="624.0" y="121.83809523809526" />
               <point x="644.0" y="68.00000000000006" />
               <point x="-83.5" y="-0.0" />
             </edge>
             <edge source="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre" target="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre/com.google.j2objc:j2objc-annotations:jar:1.1">
-              <point x="49.5" y="6.399999999999977" />
-              <point x="624.0" y="134.63809523809525" />
+              <point x="49.5" y="6.400000000000006" />
+              <point x="624.0" y="134.63809523809527" />
               <point x="644.0" y="225.83809523809526" />
               <point x="-112.0" y="-0.0" />
             </edge>
@@ -645,8 +704,8 @@
               <point x="-141.0" y="-0.0" />
             </edge>
             <edge source="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre" target="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre/com.google.code.findbugs:jsr305:jar:3.0.2">
-              <point x="49.5" y="-12.800000000000011" />
-              <point x="624.0" y="115.43809523809526" />
+              <point x="49.5" y="-12.799999999999997" />
+              <point x="624.0" y="115.43809523809529" />
               <point x="644.0" y="16.0" />
               <point x="-50.0" y="-0.0" />
             </edge>
@@ -665,8 +724,8 @@
               <point x="-94.0" y="-0.0" />
             </edge>
             <edge source="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre" target="tech.tablesaw:tablesaw-core:jar:0.34.0/com.google.guava:guava:jar:25.1-jre/org.codehaus.mojo:animal-sniffer-annotations:jar:1.14">
-              <point x="49.5" y="12.800000000000011" />
-              <point x="624.0" y="141.03809523809528" />
+              <point x="49.5" y="12.799999999999983" />
+              <point x="624.0" y="141.03809523809525" />
               <point x="-150.5" y="-0.0" />
             </edge>
             <edge source="tech.tablesaw:tablesaw-core:jar:0.34.0" target="tech.tablesaw:tablesaw-core:jar:0.34.0/io.github.classgraph:classgraph:jar:4.8.22">
@@ -675,126 +734,59 @@
               <point x="-72.5" y="-0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0999999999999996" x="-186.0" y="58.0" />
+          <settings layout="Hierarchic Group" zoom="1.4984455958549225" x="140.1659751037344" y="189.1659751037344" />
           <SelectedNodes>
-            <node>Leftovers:Zombie-Health:1.0-SNAPSHOT</node>
+            <node>tech.tablesaw:tablesaw-jsplot:jar:0.34.0</node>
           </SelectedNodes>
           <Categories />
-          <SCOPE>All</SCOPE>
           <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Documents/test_wines.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        <state relative-caret-position="155">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tech/tablesaw/tablesaw-core/0.34.0/tablesaw-core-0.34.0.jar!/tech/tablesaw/api/Table.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        <state relative-caret-position="341">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
-            <element signature="e#4891#4892#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tech/tablesaw/tablesaw-core/0.34.0/tablesaw-core-0.34.0.jar!/tech/tablesaw/io/DataFrameReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-plot.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        <state relative-caret-position="155">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test_wines.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/tech/tablesaw/tablesaw-core/0.34.0/tablesaw-core-0.34.0.jar!/tech/tablesaw/table/Relation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="442" selection-start-line="442" selection-end-line="442" />
-          <folding>
-            <element signature="e#14284#14285#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-spreadsheet-ml-training.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-new-cases20.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/zombie-health-cases500.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="31">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1736">
-          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="310">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
             <element signature="method#plotGraph#0;class#DataVisualizerBean#0" />
+            <element signature="method#combineTable#0;class#DataVisualizerBean#0" />
             <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
             <element signature="method#sortTable#0;class#DataVisualizerBean#0" />
             <element signature="e#6559#6975#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -804,10 +796,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>ZombieHealth:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

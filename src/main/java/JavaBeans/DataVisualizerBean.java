@@ -8,8 +8,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.LinkedList;
 
-public class DataVisualizerBean implements Serializable,
-        IDataPlot, IDataOrganizer {
+public class DataVisualizerBean implements Serializable, IDataVisualizer {
 
 //  construtor sem parâmetro necessário no JavaBean
     public DataVisualizerBean() {

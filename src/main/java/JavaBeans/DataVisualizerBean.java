@@ -6,6 +6,7 @@ import tech.tablesaw.plotly.api.*;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.LinkedList;
 
 public class DataVisualizerBean implements Serializable,
         IDataPlot, IDataOrganizer {
@@ -140,11 +141,36 @@ public class DataVisualizerBean implements Serializable,
 
     public String[][] combineTable(String[][] table1,
                                    String[][] table2){
+        LinkedList<String> colNames = new LinkedList<String>();
+        String[][] table = new String[table1.length + table2.length -1]
+                [table1[0].length + table2[0].length -1];
+        for (int i = 0; i < table1.length; i++) {
+            System.arraycopy(table1[i], 0, table[i], 0, table1[0].length);
+        }
+        for (String item:
+             table1[0]) {
+            int x = 0;
+            for (int i = 0; i < table2[0].length; i++) {
+                if (table2[0][i].equalsIgnoreCase(item))
+                    x++;
+            }
+            if (x == 0) {
+                colNames.add(item);
+            }
+        }
+        for (int i = colNames.size(); i > 0; i--) {
+            table[0][table[0].length -i] = colNames.get(-(i-3));
+        }
         return null;
     }
 
-    public String[][] addColumn(String[] column){
-        return null;
+    public String[][] addPatient(String[] patient, String[][] table){
+        String[][] table1 = new String[table.length+1][table[0].length];
+        for (int i = 0; i < table.length; i++) {
+            System.arraycopy(table[i], 0, table1[i], 0, table[0].length);
+        }
+        System.arraycopy(patient, 0, table1[table.length], 0, table[0].length);
+        return table1;
     }
 
     public String[][] sortTable(String dados){

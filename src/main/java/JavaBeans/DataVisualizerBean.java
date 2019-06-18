@@ -87,7 +87,7 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
             Plot.show(
                     BubblePlot.create("Relação entre dois sintomas", False, "chest_pain",
                             "trembling_finger", sintoma, "diagnostic"));
-//
+
             Plot.show(
                     BubblePlot.create("Relação entre dois sintomas", True, "chest_pain",
                             "trembling_finger", sintoma,"diagnostic"));
@@ -108,6 +108,10 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
                     Scatter3DPlot.create("Olá Mundo", True, "trembling_finger",
                             "chest_pain", "severe_anger", sintoma,
                             "diagnostic"));
+
+            Plot.show(
+                    VerticalBarPlot.create("Olá Mundo", False, "diagnostic", sintoma));
+
 
         } catch (IOException e) {
             e.printStackTrace();

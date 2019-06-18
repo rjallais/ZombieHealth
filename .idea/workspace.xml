@@ -9,8 +9,6 @@
     <list default="true" id="6565403d-e776-47f3-9711-9f1f81f899ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,13 +38,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+            <state relative-caret-position="3100">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
                 <element signature="method#plotTable#2;class#DataVisualizerBean#0" />
-                <element signature="e#1229#1237#0" expanded="true" />
                 <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
                 <element signature="method#sortTable#0;class#DataVisualizerBean#0" />
                 <element signature="method#createTable#0;class#DataVisualizerBean#0" />
@@ -159,13 +156,7 @@
             <path>
               <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="testoutput" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -260,7 +251,8 @@
       <workItem from="1560797536255" duration="8770000" />
       <workItem from="1560811491902" duration="179000" />
       <workItem from="1560836420436" duration="406000" />
-      <workItem from="1560838972378" duration="13628000" />
+      <workItem from="1560838972378" duration="13810000" />
+      <workItem from="1560854150967" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="Componente DataVisualizer">
       <created>1560053262943</created>
@@ -346,17 +338,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560805723806</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Componente DataVisualizer">
+      <created>1560852757195</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560852757195</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77996000" />
+    <option name="totallyTimeSpent" value="79177000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="7" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22712594" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23089343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -368,12 +367,11 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32996634" />
-      <window_info anchor="bottom" id="Messages" order="5" visible="true" weight="0.4523008" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32996634" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32996634" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="right" id="Maven" order="0" weight="0.32938644" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
@@ -384,8 +382,9 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="right" x="66" y="133" width="1717" height="929" id="Debug" internal_type="SLIDING" order="10" visible="true" weight="0.42787945" />
-      <window_info active="true" anchor="right" x="0" y="28" width="1920" height="1052" id="Run" maximized="true" order="11" type="WINDOWED" visible="true" weight="0.270183" />
+      <window_info anchor="right" x="66" y="133" width="1717" height="929" id="Debug" internal_type="SLIDING" order="10" weight="0.42787945" />
+      <window_info anchor="right" x="0" y="28" width="1920" height="1052" id="Run" maximized="true" order="11" type="WINDOWED" visible="true" weight="0.270183" />
+      <window_info anchor="right" id="Messages" order="12" side_tool="true" weight="0.4523008" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,34 +395,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Componente DataVisualizer" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java</url>
-          <line>98</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="novo[399]" />
@@ -822,16 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/zombie-health-cases500.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -842,15 +803,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="3100">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
             <element signature="method#plotTable#2;class#DataVisualizerBean#0" />
-            <element signature="e#1229#1237#0" expanded="true" />
             <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
             <element signature="method#sortTable#0;class#DataVisualizerBean#0" />
             <element signature="method#createTable#0;class#DataVisualizerBean#0" />

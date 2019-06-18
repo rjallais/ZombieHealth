@@ -101,16 +101,17 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
                             sintoma));
 
             Plot.show(
-                    Scatter3DPlot.create("Olá Mundo", False, "trembling_finger",
+                    Scatter3DPlot.create(sintoma + " e sua relação com trembling_finger e chest_pain", False, "trembling_finger",
                         "chest_pain", sintoma, "diagnostic"));
 
             Plot.show(
-                    Scatter3DPlot.create("Olá Mundo", True, "trembling_finger",
+                    Scatter3DPlot.create(sintoma + " e sua relação com trembling_finger e chest_pain", True, "trembling_finger",
                             "chest_pain", "severe_anger", sintoma,
                             "diagnostic"));
 
             Plot.show(
-                    VerticalBarPlot.create("Olá Mundo", False, "diagnostic", sintoma));
+                    VerticalBarPlot.create("proporção de aparição de " + sintoma
+                            + " em cada diagnóstico", False, "diagnostic", sintoma));
 
 
         } catch (IOException e) {

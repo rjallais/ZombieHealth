@@ -5,17 +5,16 @@ import JavaBeans.IDataVisualizer;
 
 public class Main {
     public static void main(String[] args) {
-        String[][] table = {{"paralysis", "yellow_tongue",
-                "member_loss", "member_loss", "chest_pain",
-                "trembling_finger", "severe_anger"}};
+
         IDataVisualizer dv = new DataVisualizerBean();
 
-        String[][] tabela = dv.sortTable("src/main/zombie-health-new-cases20.csv");
-        dv.plotTable(tabela);
+        String[][] tabela = dv.sortTable("src/main/zombie-health-spreadsheet-ml-training.csv");
+        dv.plotGraph("src/main/zombie-health-cases500.csv", "paralysis");
+//        dv.plotTable(tabela);
 //        String[] paciente = {"false", "false", "false", "false", "true", "false", "false", "false", "NOVA DOENÇA"};
 //        tabela = dv.addPatient(paciente, tabela);
 //        dv.plotTable(tabela);
-//
+
 //        dv.plotGraph("/home/rjallais/IdeaProjects/ZombieHealth/src/main/zombie-health-cases500.csv");
 
 

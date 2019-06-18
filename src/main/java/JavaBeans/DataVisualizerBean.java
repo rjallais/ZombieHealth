@@ -1,12 +1,14 @@
 package JavaBeans;
 
 import tech.tablesaw.api.*;
+import tech.tablesaw.columns.numbers.IntColumnType;
 import tech.tablesaw.plotly.Plot;
 import tech.tablesaw.plotly.api.*;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.LinkedList;
+import java.util.List;
 
 public class DataVisualizerBean implements Serializable, IDataVisualizer {
 
@@ -37,91 +39,79 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
         System.out.println(t.printAll());
     }
 
-    public void plotGraph(String Dados){
+    public void plotGraph(String Dados, String sintoma){
         try {
-//            Table t = Table.read().file("src/main/" +
-//                    "zombie-health-spreadsheet-ml-training.csv");
-//
-//            int row = t.rowCount();
-//            int col = t.columnCount();
+            Table t = Table.read().csv(Dados);
+            String[][] tb = createMatrix(t);
 
-            Table wines = Table.read().csv("src/main/zombie-health-plot.csv");
+            List<String> diagList = new LinkedList<String>();
+            int cols = tb[0].length - 1;
+            for (int i = 1; i < tb.length; i++) {
+                if (diagList.contains(tb[i][cols]))
+                    continue;
+                diagList.add(tb[i][cols]);
+            }
 
-            Table champagne =
-                    wines.where(
-                            wines.stringColumn("diagnostic").isEqualTo("viral_infection"));
+            int[][][] mat = new int[2][cols][diagList.size()];
 
+            for (int i = 0; i < cols; i++) {
+                for (int j = 0; j < diagList.size(); j++) {
+                    for (int k = 0; k < 2; k++) {
+                        mat[k][i][j] = sumOccurrences(t, tb[0][i], diagList.get(j), k);
+                    }
+                }
+            }
 
-//            int[] init = {0};
-//            IntColumn ic = IntColumn.create("init", init);
-//            for (int i = 0; i < row; i++) {
-//                for (int j = 0; j < col; i++){
-//                    System.out.println(t.getString(i, j));
-//                    IntColumn c = (IntColumn) t.column("paralysis");
-//                    c.set(1, 1);
-//                    if ((t.getString(i, j)).equalsIgnoreCase("t")){
-//                        if(i == 0){}
-//                    }
-//                    else if ((t.getString(i, j)).equalsIgnoreCase("f"))
-//                        t.row(i).setInt(j,0);
-//                }
-//            }
+            int[][] tab1 = mat[0];
+            int[][] tab2 = mat[1];
 
-//            String[] example = new String[row];
-//            for (int i = 0; i < col; i++) {
-//                example[i] = t.row(0).getString(i);
-//            }
-//            StringColumn sc = StringColumn.create("ex", example);
-//            Table T = Table.create(sc);
-//
-//            for (int x = 1; x < row; x++){
-//                for (int y = 0; y < col; y++){
-//                    example[y] = t.row(x).getString(y);
-//                }
-//                sc = StringColumn.create("ex", example);
-//                T.addColumns(sc);
-//            }
+            Table False = Table.create("False");
+            Table True = Table.create("True");
 
-//            IntColumn paralysis = t.intColumn("paralysis");
-//            paralysis.set(paralysis.isEqualTo(0), IntColumnType.missingValueIndicator());
-//
-//            IntColumn chest_pain = t.intColumn("chest_pain");
-//            chest_pain.set(chest_pain.isEqualTo(0), IntColumnType.missingValueIndicator());
+            for (int i = 0; i < cols; i++) {
+                False.addColumns(IntColumn.create(tb[0][i], tab1[i]));
+            }
+            False.addColumns(StringColumn.create(tb[0][cols], diagList));
 
-//            Table example = t.summarize("chest_pain", sum).by("paralysis");
+            for (int i = 0; i < cols; i++) {
+                True.addColumns(IntColumn.create(tb[0][i], tab2[i]));
+            }
+            True.addColumns(StringColumn.create(tb[0][cols], diagList));
+
+            NumberColumn ytF = False.intColumn(sintoma);
+            ytF.set(ytF.isEqualTo(0), 1);
+
+            NumberColumn ytT = True.intColumn(sintoma);
+            ytT.set(ytT.isEqualTo(0), 1);
 
             Plot.show(
-                    PiePlot.create("Relaçao sintomas",
-                            wines, "diagnostic", "member_loss"));
+                    BubblePlot.create("Relação entre dois sintomas", False, "chest_pain",
+                            "trembling_finger", sintoma, "diagnostic"));
+//
+            Plot.show(
+                    BubblePlot.create("Relação entre dois sintomas", True, "chest_pain",
+                            "trembling_finger", sintoma,"diagnostic"));
+
+            Plot.show(
+                    PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)", False, "diagnostic",
+                            sintoma));
+
+            Plot.show(
+                    PiePlot.create(sintoma + " está muito relacionado ao(s) diagnóstico(s)", True, "diagnostic",
+                            sintoma));
+
+            Plot.show(
+                    Scatter3DPlot.create("Olá Mundo", False, "trembling_finger",
+                        "chest_pain", sintoma, "diagnostic"));
+
+            Plot.show(
+                    Scatter3DPlot.create("Olá Mundo", True, "trembling_finger",
+                            "chest_pain", "severe_anger", sintoma,
+                            "diagnostic"));
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public String[][] combineTable(String[][] table1,
-                                   String[][] table2){
-        LinkedList<String> colNames = new LinkedList<String>();
-        String[][] table = new String[table1.length + table2.length -1]
-                [table1[0].length + table2[0].length -1];
-        for (int i = 0; i < table1.length; i++) {
-            System.arraycopy(table1[i], 0, table[i], 0, table1[0].length);
-        }
-        for (String item:
-             table1[0]) {
-            int x = 0;
-            for (int i = 0; i < table2[0].length; i++) {
-                if (table2[0][i].equalsIgnoreCase(item))
-                    x++;
-            }
-            if (x == 0) {
-                colNames.add(item);
-            }
-        }
-        for (int i = colNames.size(); i > 0; i--) {
-            table[0][table[0].length -i] = colNames.get(-(i-3));
-        }
-        return null;
     }
 
     public String[][] addPatient(String[] patient, String[][] table){
@@ -152,16 +142,8 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
         }
         table1 = table1.sortDescendingOn(v);
 
-        String[][] novo = table1 != null ? new String[table1.rowCount()
-                + 1][table1.columnCount()] : new String[0][];
-        for (i = 0; i < (table1 != null ? table1.rowCount() : 0); i++){
-            for (int j = 0; j < table1.columnCount(); j++) {
-                novo[i+1][j] = table1.getString(i, j);
-            }
-        }
-        novo[0] = table1 != null ? table1.columnNames().toArray(new String[0]) : new String[0];
-
-        return novo;
+        String[][] New = createMatrix(table1);
+        return New;
     }
 
 //  métodos extras para auxiliar os demais
@@ -176,5 +158,40 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
             t.addColumns(sc);
         }
         return t;
+    }
+
+    private Table createTable(int[][] Dados){
+        Table t = Table.create("Tabela de Dados");
+        for (int j = 0; j < Dados[0].length; j++) {
+            int[] v = new int[Dados.length-1];
+            for (int i = 1; i < Dados.length; i++) {
+                v[i-1] = Dados[i][j];
+            }
+            IntColumn ic = IntColumn.create(String.valueOf(Dados[0][j]), v);
+            t.addColumns(ic);
+        }
+        return t;
+    }
+
+    private String[][] createMatrix(Table Dados){
+        String[][] novo = Dados != null ? new String[Dados.rowCount()
+                + 1][Dados.columnCount()] : new String[0][];
+        for (int i = 0; i < (Dados != null ? Dados.rowCount() : 0); i++){
+            for (int j = 0; j < Dados.columnCount(); j++) {
+                novo[i+1][j] = Dados.getString(i, j);
+            }
+        }
+        novo[0] = Dados != null ? Dados.columnNames().toArray(new String[0]) : new String[0];
+
+        return novo;
+    }
+
+    private int sumOccurrences(Table Dados, String symptom, String diag, int is){
+
+        Table occurs = Dados.where(Dados.stringColumn("diagnostic").
+                isEqualTo(diag).and(is==1 ? Dados.booleanColumn(symptom).isTrue() :
+                Dados.booleanColumn(symptom).isFalse()));
+
+       return occurs.rowCount();
     }
 }

@@ -84,13 +84,13 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
             NumberColumn ytT = True.intColumn(sintoma);
             ytT.set(ytT.isEqualTo(0), 1);
 
-            Plot.show(
-                    BubblePlot.create("Relação entre dois sintomas", False, "chest_pain",
-                            "trembling_finger", sintoma, "diagnostic"));
+//            Plot.show(
+//                    BubblePlot.create("Relação entre dois sintomas", False, "chest_pain",
+//                            "trembling_finger", sintoma, "diagnostic"));
 
-            Plot.show(
-                    BubblePlot.create("Relação entre dois sintomas", True, "chest_pain",
-                            "trembling_finger", sintoma,"diagnostic"));
+//            Plot.show(
+//                    BubblePlot.create("Relação entre dois sintomas", True, "chest_pain",
+//                            "trembling_finger", sintoma,"diagnostic"));
 
             Plot.show(
                     PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)", False, "diagnostic",

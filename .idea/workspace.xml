@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6565403d-e776-47f3-9711-9f1f81f899ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" afterDir="false" />
-    </list>
+    <list default="true" id="6565403d-e776-47f3-9711-9f1f81f899ad" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,6 +153,24 @@
             <path>
               <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="ZombieHealth_jar2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
               <item name="testoutput" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -252,7 +267,7 @@
       <workItem from="1560811491902" duration="179000" />
       <workItem from="1560836420436" duration="406000" />
       <workItem from="1560838972378" duration="13810000" />
-      <workItem from="1560854150967" duration="999000" />
+      <workItem from="1560854150967" duration="1024000" />
     </task>
     <task id="LOCAL-00001" summary="Componente DataVisualizer">
       <created>1560053262943</created>
@@ -345,15 +360,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560852757195</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Componente DataVisualizer">
+      <created>1560857620967</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560857620967</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79177000" />
+    <option name="totallyTimeSpent" value="79202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23089343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -383,7 +404,7 @@
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="right" x="66" y="133" width="1717" height="929" id="Debug" internal_type="SLIDING" order="10" weight="0.42787945" />
-      <window_info anchor="right" x="0" y="28" width="1920" height="1052" id="Run" maximized="true" order="11" type="WINDOWED" visible="true" weight="0.270183" />
+      <window_info anchor="right" x="0" y="28" width="1920" height="1052" id="Run" maximized="true" order="11" type="WINDOWED" weight="0.270183" />
       <window_info anchor="right" id="Messages" order="12" side_tool="true" weight="0.4523008" />
     </layout>
   </component>

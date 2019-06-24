@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6565403d-e776-47f3-9711-9f1f81f899ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,39 +28,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3069">
-              <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+            <state relative-caret-position="31">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
                 <element signature="method#plotTable#2;class#DataVisualizerBean#0" />
+                <element signature="method#plotGraph#0;class#DataVisualizerBean#0" />
+                <element signature="method#plotGraph#1;class#DataVisualizerBean#0" />
+                <element signature="method#plotGraph#2;class#DataVisualizerBean#0" />
                 <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
                 <element signature="method#sortTable#0;class#DataVisualizerBean#0" />
+                <element signature="method#sortTable#1;class#DataVisualizerBean#0" />
                 <element signature="method#createTable#0;class#DataVisualizerBean#0" />
                 <element signature="method#createTable#1;class#DataVisualizerBean#0" />
                 <element signature="method#createMatrix#0;class#DataVisualizerBean#0" />
                 <element signature="method#sumOccurrences#0;class#DataVisualizerBean#0" />
+                <element signature="method#sort#0;class#DataVisualizerBean#0" />
+                <element signature="method#graphPrep#0;class#DataVisualizerBean#0" />
+                <element signature="e#11648#15204#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="93">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -97,10 +99,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/zombie-health-plot.csv" />
         <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataVisualizer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" />
         <option value="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -138,7 +140,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -147,10 +148,22 @@
               <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
               <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,7 +175,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
@@ -245,7 +258,8 @@
       <workItem from="1560859372400" duration="728000" />
       <workItem from="1560860271389" duration="201000" />
       <workItem from="1560864343195" duration="85000" />
-      <workItem from="1560864820151" duration="262000" />
+      <workItem from="1560864820151" duration="292000" />
+      <workItem from="1561404414421" duration="3749000" />
     </task>
     <task id="LOCAL-00001" summary="Componente DataVisualizer">
       <created>1560053262943</created>
@@ -359,17 +373,23 @@
       <option name="project" value="LOCAL" />
       <updated>1560864404320</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Componente DataVisualizer">
+      <created>1560865086918</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560865086918</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80478000" />
+    <option name="totallyTimeSpent" value="84257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2421959" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2459634" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -581,29 +601,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/zombie-health-plot.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="62">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test_wines.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/zombie-health-new-cases20.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -631,13 +651,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/zombie-health-spreadsheet-ml-training.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="155">
           <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
@@ -666,23 +686,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/zombie-health-cases500.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="76" selection-start-column="64" selection-end-column="76" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="uml://MAVEN/Leftovers:Zombie-Health:1.0-SNAPSHOT">
@@ -736,26 +746,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="372">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3069">
-          <caret line="113" column="51" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+        <state relative-caret-position="31">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
             <element signature="method#plotTable#2;class#DataVisualizerBean#0" />
+            <element signature="method#plotGraph#0;class#DataVisualizerBean#0" />
+            <element signature="method#plotGraph#1;class#DataVisualizerBean#0" />
+            <element signature="method#plotGraph#2;class#DataVisualizerBean#0" />
             <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
             <element signature="method#sortTable#0;class#DataVisualizerBean#0" />
+            <element signature="method#sortTable#1;class#DataVisualizerBean#0" />
             <element signature="method#createTable#0;class#DataVisualizerBean#0" />
             <element signature="method#createTable#1;class#DataVisualizerBean#0" />
             <element signature="method#createMatrix#0;class#DataVisualizerBean#0" />
             <element signature="method#sumOccurrences#0;class#DataVisualizerBean#0" />
+            <element signature="method#sort#0;class#DataVisualizerBean#0" />
+            <element signature="method#graphPrep#0;class#DataVisualizerBean#0" />
+            <element signature="e#11648#15204#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>

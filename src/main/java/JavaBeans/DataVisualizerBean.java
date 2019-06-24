@@ -1,9 +1,9 @@
 package JavaBeans;
 
 import tech.tablesaw.api.*;
-import tech.tablesaw.columns.numbers.IntColumnType;
 import tech.tablesaw.plotly.Plot;
 import tech.tablesaw.plotly.api.*;
+import tech.tablesaw.plotly.components.Figure;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -39,84 +39,95 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
         System.out.println(t.printAll());
     }
 
-    public void plotGraph(String Dados, String sintoma){
-        try {
-            Table t = Table.read().csv(Dados);
-            String[][] tb = createMatrix(t);
+    public void plotGraph(String Dados, String sintoma, String tipo, int caso) {
 
-            List<String> diagList = new LinkedList<String>();
-            int cols = tb[0].length - 1;
-            for (int i = 1; i < tb.length; i++) {
-                if (diagList.contains(tb[i][cols]))
-                    continue;
-                diagList.add(tb[i][cols]);
-            }
+        Table False = Table.create("False");
+        Table True = Table.create("True");
 
-            int[][][] mat = new int[2][cols][diagList.size()];
+        graphPrep(Dados, True, False);
 
-            for (int i = 0; i < cols; i++) {
-                for (int j = 0; j < diagList.size(); j++) {
-                    for (int k = 0; k < 2; k++) {
-                        mat[k][i][j] = sumOccurrences(t, tb[0][i], diagList.get(j), k);
-                    }
+        Figure fig = new Figure();
+        switch (caso) {
+            case (0):
+                switch (tipo) {
+                    case ("Bar"):
+                        fig = VerticalBarPlot.create("Proporção de aparição de " + sintoma
+                                + " em cada diagnóstico", False, "diagnostic", sintoma);
+                    case ("Pie"):
+                        fig = PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)",
+                                False, "diagnostic", sintoma);
                 }
-            }
 
-            int[][] tab1 = mat[0];
-            int[][] tab2 = mat[1];
-
-            Table False = Table.create("False");
-            Table True = Table.create("True");
-
-            for (int i = 0; i < cols; i++) {
-                False.addColumns(IntColumn.create(tb[0][i], tab1[i]));
-            }
-            False.addColumns(StringColumn.create(tb[0][cols], diagList));
-
-            for (int i = 0; i < cols; i++) {
-                True.addColumns(IntColumn.create(tb[0][i], tab2[i]));
-            }
-            True.addColumns(StringColumn.create(tb[0][cols], diagList));
-
-            NumberColumn ytF = False.intColumn(sintoma);
-            ytF.set(ytF.isEqualTo(0), 1);
-
-            NumberColumn ytT = True.intColumn(sintoma);
-            ytT.set(ytT.isEqualTo(0), 1);
-
-//            Plot.show(
-//                    BubblePlot.create("Relação entre dois sintomas", False, "chest_pain",
-//                            "trembling_finger", sintoma, "diagnostic"));
-
-//            Plot.show(
-//                    BubblePlot.create("Relação entre dois sintomas", True, "chest_pain",
-//                            "trembling_finger", sintoma,"diagnostic"));
-
-            Plot.show(
-                    PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)", False, "diagnostic",
-                            sintoma));
-
-            Plot.show(
-                    PiePlot.create(sintoma + " está muito relacionado ao(s) diagnóstico(s)", True, "diagnostic",
-                            sintoma));
-
-            Plot.show(
-                    Scatter3DPlot.create(sintoma + " e sua relação com trembling_finger e chest_pain", False, "trembling_finger",
-                        "chest_pain", sintoma, "diagnostic"));
-
-            Plot.show(
-                    Scatter3DPlot.create(sintoma + " e sua relação com trembling_finger e chest_pain", True, "trembling_finger",
-                            "chest_pain", "severe_anger", sintoma,
-                            "diagnostic"));
-
-            Plot.show(
-                    VerticalBarPlot.create("proporção de aparição de " + sintoma
-                            + " em cada diagnóstico", False, "diagnostic", sintoma));
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
+            case (1):
+                switch (tipo) {
+                    case ("Bar"):
+                        fig = VerticalBarPlot.create("Proporção de aparição de " + sintoma
+                                + " em cada diagnóstico", True, "diagnostic", sintoma);
+                    case ("Pie"):
+                        fig = PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)",
+                                True, "diagnostic", sintoma);
+                }
         }
+
+        Plot.show(fig);
+    }
+
+    public void plotGraph(String dados, String sintoma1, String sintoma2, String tipo, int caso){
+        Table False = Table.create("False");
+        Table True = Table.create("True");
+
+        graphPrep(dados, True, False);
+
+        Figure fig = new Figure();
+        switch (caso){
+            case(0):
+                if ("Scatter".equals(tipo)) {
+                    fig = ScatterPlot.create("Relação entre os sintomas " + sintoma1 +
+                            " e " + sintoma2, False, sintoma1, sintoma2, "diagnostic");
+                }
+                case(1): if ("Scatter".equals(tipo)) {
+                    fig = ScatterPlot.create("Relação entre os sintomas " + sintoma1 +
+                            " e " + sintoma2, True, sintoma1, sintoma2, "diagnostic");
+                }
+        }
+
+        Plot.show(fig);
+    }
+
+    public void plotGraph(String dados, String sintoma1, String sintoma2, String sintoma3, String tipo, int caso){
+        Table False = Table.create("False");
+        Table True = Table.create("True");
+
+        graphPrep(dados, True, False);
+
+        Figure fig = new Figure();
+        switch (caso) {
+            case (0):
+                switch (tipo) {
+                    case ("Bubble"):
+                        NumberColumn ytF = False.intColumn(sintoma3);
+                        ytF.set(ytF.isEqualTo(0), 1);
+                        fig = BubblePlot.create("Relação entre os três sintomas", False, sintoma1,
+                                sintoma2, sintoma3, "diagnostic");
+                    case ("Scatter3D"):
+                        fig = Scatter3DPlot.create("Relação entre os três sintomas", False,
+                                sintoma1, sintoma2, sintoma3, "diagnostic");
+                }
+
+            case (1):
+                switch (tipo) {
+                    case ("Bubble"):
+                        NumberColumn ytT = True.intColumn(sintoma3);
+                        ytT.set(ytT.isEqualTo(0), 1);
+                        fig = BubblePlot.create("Relação entre os três sintomas", True, sintoma1,
+                                sintoma2, sintoma3, "diagnostic");
+                    case ("Scatter3D"):
+                        fig = Scatter3DPlot.create("Relação entre os três sintomas", True,
+                                sintoma1, sintoma2, sintoma3, "diagnostic");
+                }
+        }
+
+        Plot.show(fig);
     }
 
     public String[][] addPatient(String[] patient, String[][] table){
@@ -136,19 +147,12 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
             e.printStackTrace();
         }
 
-        String[] v = new String[table1.columnCount()-1];
-        int i = 0;
-        for (String string:
-                table1.columnNames()) {
-            if (i == table1.columnCount()-1)
-                break;
-            v[i] = string;
-            i++;
-        }
-        table1 = table1.sortDescendingOn(v);
+        return sort(table1);
+    }
 
-        String[][] New = createMatrix(table1);
-        return New;
+    public String[][] sortTable(String[][] dados){
+        Table table = createTable(dados);
+        return sort(table);
     }
 
 //  métodos extras para auxiliar os demais
@@ -198,5 +202,64 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
                 Dados.booleanColumn(symptom).isFalse()));
 
        return occurs.rowCount();
+    }
+
+    private String[][] sort(Table table1){
+        String[] v = new String[table1.columnCount()-1];
+        int i = 0;
+        for (String string:
+                table1.columnNames()) {
+            if (i == table1.columnCount()-1)
+                break;
+            v[i] = string;
+            i++;
+        }
+        table1 = table1.sortDescendingOn(v);
+
+        return createMatrix(table1);
+    }
+
+    private void graphPrep(String Data, Table True, Table False){
+        try {
+            Table t = Table.read().csv(Data);
+            String[][] tb = createMatrix(t);
+
+            List<String> diagList = new LinkedList<>();
+            int cols = tb[0].length - 1;
+            for (int i = 1; i < tb.length; i++) {
+                if (diagList.contains(tb[i][cols]))
+                    continue;
+                diagList.add(tb[i][cols]);
+            }
+
+            int[][][] mat = new int[2][cols][diagList.size()];
+
+            for (int i = 0; i < cols; i++) {
+                for (int j = 0; j < diagList.size(); j++) {
+                    for (int k = 0; k < 2; k++) {
+                        mat[k][i][j] = sumOccurrences(t, tb[0][i], diagList.get(j), k);
+                    }
+                }
+            }
+
+            int[][] tab1 = mat[0];
+            int[][] tab2 = mat[1];
+
+//            Table False = Table.create("False");
+//            Table True = Table.create("True");
+
+            for (int i = 0; i < cols; i++) {
+                False.addColumns(IntColumn.create(tb[0][i], tab1[i]));
+            }
+            False.addColumns(StringColumn.create(tb[0][cols], diagList));
+
+            for (int i = 0; i < cols; i++) {
+                True.addColumns(IntColumn.create(tb[0][i], tab2[i]));
+            }
+            True.addColumns(StringColumn.create(tb[0][cols], diagList));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

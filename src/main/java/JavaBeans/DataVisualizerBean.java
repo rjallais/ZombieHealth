@@ -49,23 +49,23 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
         Figure fig = new Figure();
         switch (caso) {
             case (0):
-                switch (tipo) {
-                    case ("Bar"):
-                        fig = VerticalBarPlot.create("Proporção de aparição de " + sintoma
-                                + " em cada diagnóstico", False, "diagnostic", sintoma);
-                    case ("Pie"):
-                        fig = PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)",
-                                False, "diagnostic", sintoma);
+                if ("Bar".equals(tipo)) {
+                    fig = VerticalBarPlot.create("Proporção de aparição de " + sintoma
+                            + " em cada diagnóstico", False, "diagnostic", sintoma);
+
+                } else if ("Pie".equals(tipo)) {
+                    fig = PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)",
+                            False, "diagnostic", sintoma);
                 }
 
             case (1):
-                switch (tipo) {
-                    case ("Bar"):
-                        fig = VerticalBarPlot.create("Proporção de aparição de " + sintoma
-                                + " em cada diagnóstico", True, "diagnostic", sintoma);
-                    case ("Pie"):
-                        fig = PiePlot.create(sintoma + " não está muito relacionado ao(s) diagnóstico(s)",
-                                True, "diagnostic", sintoma);
+                if ("Bar".equals(tipo)) {
+                    fig = VerticalBarPlot.create("Proporção de aparição de " + sintoma
+                            + " em cada diagnóstico", True, "diagnostic", sintoma);
+
+                } else if ("Pie".equals(tipo)) {
+                    fig = PiePlot.create(sintoma + " está relacionado ao(s) diagnóstico(s)",
+                            True, "diagnostic", sintoma);
                 }
         }
 
@@ -103,27 +103,27 @@ public class DataVisualizerBean implements Serializable, IDataVisualizer {
         Figure fig = new Figure();
         switch (caso) {
             case (0):
-                switch (tipo) {
-                    case ("Bubble"):
-                        NumberColumn ytF = False.intColumn(sintoma3);
-                        ytF.set(ytF.isEqualTo(0), 1);
-                        fig = BubblePlot.create("Relação entre os três sintomas", False, sintoma1,
-                                sintoma2, sintoma3, "diagnostic");
-                    case ("Scatter3D"):
-                        fig = Scatter3DPlot.create("Relação entre os três sintomas", False,
-                                sintoma1, sintoma2, sintoma3, "diagnostic");
+                if ("Bubble".equals(tipo)) {
+                    NumberColumn ytF = False.intColumn(sintoma3);
+                    ytF.set(ytF.isEqualTo(0), 1);
+                    fig = BubblePlot.create("Relação entre os três sintomas", False, sintoma1,
+                            sintoma2, sintoma3, "diagnostic");
+
+                } else if ("Scatter3D".equals(tipo)) {
+                    fig = Scatter3DPlot.create("Relação entre os três sintomas", False,
+                            sintoma1, sintoma2, sintoma3, "diagnostic");
                 }
 
             case (1):
-                switch (tipo) {
-                    case ("Bubble"):
-                        NumberColumn ytT = True.intColumn(sintoma3);
-                        ytT.set(ytT.isEqualTo(0), 1);
-                        fig = BubblePlot.create("Relação entre os três sintomas", True, sintoma1,
-                                sintoma2, sintoma3, "diagnostic");
-                    case ("Scatter3D"):
-                        fig = Scatter3DPlot.create("Relação entre os três sintomas", True,
-                                sintoma1, sintoma2, sintoma3, "diagnostic");
+                if ("Bubble".equals(tipo)) {
+                    NumberColumn ytT = True.intColumn(sintoma3);
+                    ytT.set(ytT.isEqualTo(0), 1);
+                    fig = BubblePlot.create("Relação entre os três sintomas", True, sintoma1,
+                            sintoma2, sintoma3, "diagnostic");
+
+                } else if ("Scatter3D".equals(tipo)) {
+                    fig = Scatter3DPlot.create("Relação entre os três sintomas", True,
+                            sintoma1, sintoma2, sintoma3, "diagnostic");
                 }
         }
 

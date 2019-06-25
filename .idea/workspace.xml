@@ -6,7 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6565403d-e776-47f3-9711-9f1f81f899ad" name="Default Changelist" comment="Componente DataVisualizer" />
+    <list default="true" id="6565403d-e776-47f3-9711-9f1f81f899ad" name="Default Changelist" comment="Componente DataVisualizer">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ZombieHealth_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ZombieHealth_jar/ZombieHealth.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ZombieHealth_jar/ZombieHealth.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JavaBeans/IDataOrganizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JavaBeans/IDataOrganizer.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
@@ -20,7 +27,34 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="961">
+              <caret line="96" column="113" selection-start-line="96" selection-start-column="113" selection-end-line="96" selection-end-column="113" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
+                <element signature="method#plotTable#2;class#DataVisualizerBean#0" />
+                <element signature="method#plotGraph#0;class#DataVisualizerBean#0" />
+                <element signature="method#plotGraph#1;class#DataVisualizerBean#0" />
+                <element signature="method#plotGraph#2;class#DataVisualizerBean#0" />
+                <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
+                <element signature="method#sortTable#0;class#DataVisualizerBean#0" />
+                <element signature="method#sortTable#1;class#DataVisualizerBean#0" />
+                <element signature="method#createTable#0;class#DataVisualizerBean#0" />
+                <element signature="method#createTable#1;class#DataVisualizerBean#0" />
+                <element signature="method#createMatrix#0;class#DataVisualizerBean#0" />
+                <element signature="method#sumOccurrences#0;class#DataVisualizerBean#0" />
+                <element signature="method#sort#0;class#DataVisualizerBean#0" />
+                <element signature="method#graphPrep#0;class#DataVisualizerBean#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,9 +90,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/zombie-health-plot.csv" />
         <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataVisualizer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java" />
       </list>
     </option>
@@ -97,8 +131,62 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="ZombieHealth_jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ZombieHealth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ZombieHealth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="JavaBeans" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -197,6 +285,8 @@
       <workItem from="1560864820151" duration="292000" />
       <workItem from="1561404414421" duration="5143000" />
       <workItem from="1561421544647" duration="345000" />
+      <workItem from="1561435316067" duration="262000" />
+      <workItem from="1561436475144" duration="245000" />
     </task>
     <task id="LOCAL-00001" summary="Componente DataVisualizer">
       <created>1560053262943</created>
@@ -352,16 +442,23 @@
       <option name="project" value="LOCAL" />
       <updated>1561421717509</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Componente DataVisualizer">
+      <created>1561435416093</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1561435416093</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85996000" />
+    <option name="totallyTimeSpent" value="86503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497309" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25726587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -372,7 +469,7 @@
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32996634" />
+      <window_info anchor="bottom" id="Version Control" order="4" visible="true" weight="0.32996634" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32996634" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
@@ -390,7 +487,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="right" x="66" y="133" width="1717" height="929" id="Debug" internal_type="SLIDING" order="10" weight="0.42787945" />
       <window_info anchor="right" x="0" y="28" width="1920" height="1052" id="Run" maximized="true" order="11" type="WINDOWED" weight="0.270183" />
-      <window_info anchor="right" id="Messages" order="12" side_tool="true" weight="0.45209903" />
+      <window_info active="true" anchor="right" id="Messages" order="12" side_tool="true" visible="true" weight="0.45209903" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -728,13 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataPlot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -759,14 +849,22 @@
     <entry file="file://$PROJECT_DIR$/ZombieHealth.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/IDataOrganizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JavaBeans/DataVisualizerBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3100">
-          <caret line="227" column="40" lean-forward="true" selection-start-line="227" selection-start-column="40" selection-end-line="227" selection-end-column="40" />
+        <state relative-caret-position="961">
+          <caret line="96" column="113" selection-start-line="96" selection-start-column="113" selection-end-line="96" selection-end-column="113" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#plotTable#0;class#DataVisualizerBean#0" />
             <element signature="method#plotTable#2;class#DataVisualizerBean#0" />
+            <element signature="method#plotGraph#0;class#DataVisualizerBean#0" />
             <element signature="method#plotGraph#1;class#DataVisualizerBean#0" />
             <element signature="method#plotGraph#2;class#DataVisualizerBean#0" />
             <element signature="method#addPatient#0;class#DataVisualizerBean#0" />
@@ -776,6 +874,8 @@
             <element signature="method#createTable#1;class#DataVisualizerBean#0" />
             <element signature="method#createMatrix#0;class#DataVisualizerBean#0" />
             <element signature="method#sumOccurrences#0;class#DataVisualizerBean#0" />
+            <element signature="method#sort#0;class#DataVisualizerBean#0" />
+            <element signature="method#graphPrep#0;class#DataVisualizerBean#0" />
           </folding>
         </state>
       </provider>
